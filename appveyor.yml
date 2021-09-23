@@ -3,7 +3,7 @@ branches:
   only:
   - master
 
-configuration: Debug
+configuration: Test
 
 before_build:
   - nuget restore 
