@@ -26,5 +26,12 @@ namespace lb1
             data.AddItem();
             richTextBox1.Text += data.GetText();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            richTextBox2.Text = "";
+            richTextBox2.Text += "кол-во свежих товаров " + data.CalculateCountTrue() + '\n';
+            richTextBox2.Text += "кол-во просроченных товаров " + data.CalculateCountFalse() + '\n';
+        }
     }
 }

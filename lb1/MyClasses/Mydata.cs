@@ -36,7 +36,6 @@ namespace lb1.MyClasses
             list_items.Clear();
             return list_items.Count;
         }
-            
 
         public bool ChangeCondition(Item item)
         {

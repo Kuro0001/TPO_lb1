@@ -54,8 +54,9 @@ namespace lb1
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(262, 33);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Провести тест";
+            this.button2.Text = "Провести анализ";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // richTextBox1
             // 

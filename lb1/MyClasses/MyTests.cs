@@ -62,10 +62,35 @@ namespace lb1.MyClasses
                 Assert.AreEqual(true, data.ChangeCondition(data.Data[i]));
                 Assert.AreEqual(!saved_item.condition, data.Data[i].condition);
             }
-            
-
         }
 
+        [Test]
+        public void CalculateCountTrueTest()
+        {
+            FillListTest();
+            Assert.GreaterOrEqual(data.Data.Count(i => i.condition == true), 0);
+        }
 
+        [Test]
+        public void CalculateCountFalseTest()
+        {
+            FillListTest();
+            Assert.GreaterOrEqual(data.Data.Count(i => i.condition == false), 0);
+        }
+
+        [Test]
+        public void GetTextTtest()
+        {
+            FillListTest();
+            string result = "";
+            foreach (Item i in data.Data)
+            {
+                result = String.Concat(result, i.name, ' ', i.condition, '\n');
+            }
+            Assert.GreaterOrEqual(result.Length, 0);
+            string s = data.GetText();
+            Assert.AreEqual(result.Length, s.Length);
+            Assert.AreEqual(result, s);
+        }
     }
 }
