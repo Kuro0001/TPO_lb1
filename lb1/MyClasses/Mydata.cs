@@ -74,7 +74,6 @@ namespace lb1.MyClasses
                 text += i.name + " " + i.condition + '\n';
             }
             return text;
-
         }
 
         public List<Item> Data
