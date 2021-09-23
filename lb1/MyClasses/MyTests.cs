@@ -69,6 +69,7 @@ namespace lb1.MyClasses
         {
             FillListTest();
             Assert.GreaterOrEqual(data.Data.Count(i => i.condition == true), 0);
+            Assert.AreEqual(data.Data.Count(i => i.condition == true), data.CalculateCountTrue());
         }
 
         [Test]
@@ -76,6 +77,7 @@ namespace lb1.MyClasses
         {
             FillListTest();
             Assert.GreaterOrEqual(data.Data.Count(i => i.condition == false), 0);
+            Assert.AreEqual(data.Data.Count(i => i.condition == false), data.CalculateCountFalse());
         }
 
         [Test]
