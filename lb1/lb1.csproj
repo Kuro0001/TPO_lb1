@@ -79,8 +79,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyClasses\Mydata.cs" />
-    <Compile Include="MyClasses\MyTests.cs" />
+    <Compile Include="MyClasses\Store.cs" />
+    <Compile Include="MyClasses\Store_Tests.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

@@ -13,25 +13,25 @@ namespace lb1
 {
     public partial class Form1 : Form
     {
-        Mydata data;
+        Store data;
         public Form1()
         {
             InitializeComponent();
-            data = new Mydata();
+            data = new Store();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             richTextBox1.Text = "";
-            data.AddItem();
-            richTextBox1.Text += data.GetText();
+            data.AddItem("name");
+            richTextBox1.Text += data.GetListAsText();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             richTextBox2.Text = "";
-            richTextBox2.Text += "кол-во свежих товаров " + data.CalculateCountTrue() + '\n';
-            richTextBox2.Text += "кол-во просроченных товаров " + data.CalculateCountFalse() + '\n';
+            richTextBox2.Text += "кол-во свежих товаров " + data.CalculateCountOnCounter() + '\n';
+            richTextBox2.Text += "кол-во просроченных товаров " + data.CalculateCountNotOnCounter() + '\n';
         }
     }
 }
